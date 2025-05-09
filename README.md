@@ -1,9 +1,14 @@
-# SkyGlymps - AI Chat Application
+# SkyGlimps: AI-Powered Location Intelligence for Smarter Risk Management
 
-A MERN stack application with AI integration, featuring a beautiful UI/UX for chat interactions.
+This AI-powered SaaS application helps organizations assess risk and enhance operational efficiency by delivering actionable, location-specific insights through a generative AI virtual assistant. 
+
+The platform supports storing data for multiple locations and provides real-time environmental conditions—including temperature, humidity, and wind direction. Tailored for industries like Logistics, Aviation, and Agriculture, it empowers teams to build accurate risk profiles and make informed decisions backed by intelligent, real-time data.
+
+Developed on MERN stack and OpenAI API, the prototype features a beautiful UI/UX for chat interactions and weather data.
 
 ## Features
 
+- OpenAI LLM ```gpt-4o-mini```
 - Modern React frontend with Material-UI
 - Express.js backend with MongoDB integration
 - OpenAI ChatGPT integration

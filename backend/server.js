@@ -177,21 +177,7 @@ app.delete('/api/locations/:locationId', async (req, res) => {
     res.status(500).json({ error: 'Failed to delete location' });
   }
 });
-async function generateImage() {
-    try {
-      const response = await openai.images.generate({
-        model: "dall-e-3",
-        prompt: "A futuristic city with flying cars at sunset",
-        n: 1,
-        size: "1024x1024"
-      });
-  
-      const imageUrl = response.data[0].url;
-      console.log("Generated image URL:", imageUrl);
-    } catch (error) {
-      console.error("Error generating image:", error);
-    }
-  }
+
 // AI Routes
 app.post('/api/chat', async (req, res) => {
   try {
@@ -200,7 +186,7 @@ app.post('/api/chat', async (req, res) => {
     if (!message) {
       return res.status(400).json({ error: 'Message is required' });
     }
-    generateImage();
+
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
